@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNav from './components/MainNav/MainNav';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
@@ -13,14 +14,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p> */}
         <h1>Bienvenido a TiendaCompras</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ItemListContainer name="Christian" />
       </header>
     </div>
   )
