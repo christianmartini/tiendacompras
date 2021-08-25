@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.Footer {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(4px + 2vmin);
+  color: white;
+}

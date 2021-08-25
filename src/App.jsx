@@ -16,6 +16,10 @@ function App() {
         <h1>Bienvenido a TiendaCompras</h1>
         <ItemListContainer name="Christian" />
       </header>
+      <footer class="Footer">
+          <p>Autor: Christian Martini</p>
+          <p><a href="mailto:christian.martini@outlook.com">christian.martini@outlook.com</a></p>
+      </footer>
     </div>
   )
 }

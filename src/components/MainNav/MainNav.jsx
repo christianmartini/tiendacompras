@@ -8,7 +8,7 @@ function MainNav (){
 return (
     <Navbar bg="light" expand="lg">
     <Container>
-        <Navbar.Brand href="#home">Tienda Compras - <b>Christian Martini</b></Navbar.Brand>
+        <Navbar.Brand href="#home"><img src="logo.png" alt="logo" width="150" height="110"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
