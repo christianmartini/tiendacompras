@@ -3,7 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNav from './components/MainNav/MainNav';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   
@@ -21,7 +20,6 @@ function App() {
         </p> */}
         <h1>Bienvenido a TiendaCompras</h1>
         <ItemListContainer name="Christian"></ItemListContainer>
-        <ItemCount initial={1} stock={10} onAdd={onAdd}></ItemCount>
       </header>
       <footer className="Footer">
           <p>Autor: Christian Martini</p>

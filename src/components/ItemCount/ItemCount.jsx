@@ -40,10 +40,7 @@ function ItemCount({stock, initial, onAdd}){
                 <button className="btn" onClick={handlerOnAdd}>Agregar</button>
             </div>
         )
-    }
-
-
-    
+    }  
 };
 
 export default ItemCount

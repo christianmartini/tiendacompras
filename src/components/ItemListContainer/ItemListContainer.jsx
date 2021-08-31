@@ -1,7 +1,11 @@
-function ItemListContainer (props){
+import ItemCount from '../ItemCount/ItemCount';
+
+function ItemListContainer ({name,stock,initial,onAdd}){
     return (
-        <h1>Hola {props.name}!!!</h1>
+        <div>
+            <h1>Hola {name}!!!</h1>
+            <ItemCount stock={10} initial={1} onAdd={onAdd}></ItemCount>
+        </div>
     )
 }
-
 export default ItemListContainer
