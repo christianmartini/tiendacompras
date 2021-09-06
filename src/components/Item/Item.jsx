@@ -4,14 +4,16 @@ const Item = ({producto}) => {
     return (
         <ul>
             <div className='card w-50 mt-2'>
-            <div className="card-header">
-                {producto.name}
+                <img src={producto.img} alt="iphone" width="50" height="60"></img>
+                <div className="card-header">
+                    {producto.name}
+                </div>
+                <div className="card-body">
+                    {producto.modelo}
+                </div>
+                <button>Mas info</button>
             </div>
-            <div className="card-body">
-                {producto.modelo}
-            </div>
-        </div>  
-    </ul>     
+        </ul>     
 )
 }
 
