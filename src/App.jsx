@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNav from './components/MainNav/MainNav';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   
@@ -20,6 +20,7 @@ function App() {
       </header>
       <body>
         <ItemListContainer name="Christian" onAdd={onAdd}></ItemListContainer>
+        <ItemDetailContainer id='5'></ItemDetailContainer>
       </body>
       <footer className="Footer">
           <p>Autor: Christian Martini</p>
