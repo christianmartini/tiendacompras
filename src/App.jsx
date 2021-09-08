@@ -1,3 +1,4 @@
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,6 +13,7 @@ function App() {
   }
 
   return (
+    <BrowserRouter>
     <div className="App">
       <MainNav />
       <header className="App-header">
@@ -19,14 +21,24 @@ function App() {
         <h1>Bienvenido a TiendaCompras</h1>
       </header>
       <body>
-        <ItemListContainer name="Christian" onAdd={onAdd}></ItemListContainer>
-        <ItemDetailContainer id='5'></ItemDetailContainer>
+        <Switch>
+          <Route exact path='/'>
+            <ItemListContainer name="Christian" onAdd={onAdd}></ItemListContainer>
+          </Route>
+          <Route exact path='/detalle'>
+            <ItemDetailContainer></ItemDetailContainer>
+          </Route>
+          <Route exact path='/categoria/:category'>
+            <ItemListContainer></ItemListContainer>
+          </Route>
+        </Switch>
       </body>
       <footer className="Footer">
           <p>Autor: Christian Martini</p>
           <p><a href="mailto:christian.martini@outlook.com">christian.martini@outlook.com</a></p>
       </footer>
     </div>
+    </BrowserRouter>
   )
 }
 
