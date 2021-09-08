@@ -5,6 +5,7 @@ import React from 'react';
 const ItemDetail = ({producto}) => {
     return (
         <ul>
+            <h1>Detalle de Producto</h1>
             <div className='card w-50 mt-2'>
                 <img src={producto.img} alt="telefono" width="50" height="60"></img>
                 <div className="card-body">
