@@ -4,8 +4,6 @@ import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router';
 import { findItems } from '../../utils/promises';
 
-
-
 function ItemListContainer ({name,stock,initial,onAdd}){
     
     const [items, setItems] = useState([]);
