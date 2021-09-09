@@ -22,7 +22,6 @@ function ItemListContainer ({name,stock,initial,onAdd}){
 
     return (
         <div>
-            <h1>Hola {name}!!!</h1>
             <ItemList productos={items}/>
             <ItemCount stock={10} initial={1} onAdd={onAdd}></ItemCount>
         </div>

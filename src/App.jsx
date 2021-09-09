@@ -1,5 +1,5 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNav from './components/MainNav/MainNav';
@@ -17,8 +17,8 @@ function App() {
     <div className="App">
       <MainNav />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Bienvenido a TiendaCompras</h1>
+        {/* <img src={logo} className="App-logo" alt="logo" />
+        <h1>Bienvenido a TiendaCompras</h1> */}
       </header>
       <body>
         <Switch>

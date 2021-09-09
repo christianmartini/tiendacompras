@@ -12,7 +12,6 @@ function ItemList({productos}) {
 
 return (
     <div>
-    <h1>Mis productos</h1>
     <ul>
         {
             productos.map((producto) => {return <Item key={producto.id} producto={producto} />})
