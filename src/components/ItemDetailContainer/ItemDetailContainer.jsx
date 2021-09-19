@@ -12,7 +12,6 @@ function ItemDetailContainer ({id}){
         })
        }, [])
 
-
     return (
         <div>
             <ItemDetail producto={itemdet}/>

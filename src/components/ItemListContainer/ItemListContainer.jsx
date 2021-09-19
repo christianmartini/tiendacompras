@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ItemCount from '../ItemCount/ItemCount';
+// import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router';
 import { findItems } from '../../utils/promises';
@@ -23,7 +23,7 @@ function ItemListContainer ({name,stock,initial,onAdd}){
     return (
         <div>
             <ItemList productos={items}/>
-            <ItemCount stock={10} initial={1} onAdd={onAdd}></ItemCount>
+            {/* <ItemCount stock={10} initial={1} onAdd={onAdd}></ItemCount> */}
         </div>
     )
 }

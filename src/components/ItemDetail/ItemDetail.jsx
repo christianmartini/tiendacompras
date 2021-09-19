@@ -1,8 +1,9 @@
 import React from 'react';
+import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad';
+// import ItemCount from '../ItemCount/ItemCount';
 
-
-//title, price, name, model, img
 const ItemDetail = ({producto}) => {
+
     return (
         <ul>
             <h1>Detalle de Producto</h1>
@@ -21,6 +22,9 @@ const ItemDetail = ({producto}) => {
                     {producto.model}
                 </div>
                 <button>Mas info</button>
+                <Intercambiabilidad />
+                {/* <ItemCount onAdd={onAdd} stock={10} initial={1} /> */}
+                {/* <button>Terminar la compra</button> */}
             </div>
         </ul>     
 )

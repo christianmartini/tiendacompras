@@ -33,7 +33,6 @@ function ItemCount({stock, initial, onAdd}){
     else{
         return (
             <div>
-                <h1>Contador</h1>
                 <button className="btn"  onClick={handlerClickRest}>-</button>
                 <label className="btn">{count}</label>
                 <button className="btn" onClick={handlerClickSum}>+</button>
