@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNav from './components/MainNav/MainNav';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { CartContext } from './context/CartContext';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   }
 
   return (
+    <CartContext.Provider>
     <BrowserRouter>
     <div className="App">
       <MainNav />
@@ -20,7 +22,7 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" />
         <h1>Bienvenido a TiendaCompras</h1> */}
       </header>
-      <body>
+      <div>
         <Switch>
           <Route exact path='/'>
             <ItemListContainer name="Christian" onAdd={onAdd}></ItemListContainer>
@@ -32,13 +34,14 @@ function App() {
             <ItemListContainer></ItemListContainer>
           </Route>
         </Switch>
-      </body>
+      </div>
       <footer className="Footer">
           <p>Autor: Christian Martini</p>
           <p><a href="mailto:christian.martini@outlook.com">christian.martini@outlook.com</a></p>
       </footer>
     </div>
     </BrowserRouter>
+    </CartContext.Provider>
   )
 }
 
