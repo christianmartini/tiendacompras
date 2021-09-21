@@ -1,8 +1,16 @@
-import React from 'react';
-import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad';
-// import ItemCount from '../ItemCount/ItemCount';
+import React, { useState } from 'react';
+import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({producto}) => {
+    console.log(producto)
+
+    const [changeButton, setChangeButton ] = useState(false)
+
+    const onAdd = () => {
+        setChangeButton(true)
+        alert("agregaste articlos al carrtio")
+    }
 
     return (
         <ul>
@@ -21,10 +29,9 @@ const ItemDetail = ({producto}) => {
                 <div className="card-body">
                     {producto.model}
                 </div>
-                <button>Mas info</button>
-                <Intercambiabilidad />
-                {/* <ItemCount onAdd={onAdd} stock={10} initial={1} /> */}
-                {/* <button>Terminar la compra</button> */}
+                <button>Mas info</button>  
+                {!changeButton && <ItemCount onAdd={onAdd} stock={10} initial={1} changeButton={changeButton} />}
+                {changeButton && <Link to="/cart"><button>Terminar la compra</button></Link> }
             </div>
         </ul>     
 )

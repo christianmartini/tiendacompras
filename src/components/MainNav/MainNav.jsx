@@ -4,12 +4,13 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget';
 import {Link} from 'react-router-dom';
+import Logo from '../../assets/imagenes/logo.png'
 
 function MainNav (){
 return (
     <Navbar bg="light" expand="lg">
     <Container>
-        <Navbar.Brand><Link to="/"><img src="logo.png" alt="logo" width="150" height="110"></img></Link></Navbar.Brand>
+        <Navbar.Brand><Link to="/"><img src= {Logo} alt="logo" width="150" height="110"></img></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">

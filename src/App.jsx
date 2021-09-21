@@ -6,32 +6,28 @@ import MainNav from './components/MainNav/MainNav';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartContext } from './context/CartContext';
+import Cart from './components/Cart/Cart';
 
 function App() {
-
-  const onAdd = (count) => {
-    alert(`Ud a agergado ${count} unidades al carrito`);
-  }
 
   return (
     <CartContext.Provider>
     <BrowserRouter>
-    <div className="App">
+    <div>
       <MainNav />
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <h1>Bienvenido a TiendaCompras</h1> */}
-      </header>
       <div>
         <Switch>
           <Route exact path='/'>
-            <ItemListContainer name="Christian" onAdd={onAdd}></ItemListContainer>
+            <ItemListContainer name="Christian"></ItemListContainer>
           </Route>
           <Route exact path='/detalle'>
             <ItemDetailContainer></ItemDetailContainer>
           </Route>
           <Route exact path='/categoria/:category'>
             <ItemListContainer></ItemListContainer>
+          </Route>
+          <Route exact path='/cart'>
+            <Cart />
           </Route>
         </Switch>
       </div>
