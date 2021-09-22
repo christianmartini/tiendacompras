@@ -5,13 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNav from './components/MainNav/MainNav';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import { CartContext } from './context/CartContext';
+import { CartContext,CartContextProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
+import { useContext } from 'react';
 
 function App() {
-
+  const carrito = useContext(CartContext)
   return (
-    <CartContext.Provider>
+    <CartContextProvider value={carrito}>
     <BrowserRouter>
     <div>
       <MainNav />
@@ -20,7 +21,7 @@ function App() {
           <Route exact path='/'>
             <ItemListContainer name="Christian"></ItemListContainer>
           </Route>
-          <Route exact path='/detalle'>
+          <Route exact path='/detalle/:id'>
             <ItemDetailContainer></ItemDetailContainer>
           </Route>
           <Route exact path='/categoria/:category'>
@@ -37,7 +38,7 @@ function App() {
       </footer>
     </div>
     </BrowserRouter>
-    </CartContext.Provider>
+    </CartContextProvider>
   )
 }
 

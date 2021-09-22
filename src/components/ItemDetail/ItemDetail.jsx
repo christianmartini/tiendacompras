@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
+
+
 
 const ItemDetail = ({producto}) => {
-    console.log(producto)
+
+    const {addItem} = useContext(CartContext);
+    const {carrito} = useContext(CartContext);
 
     const [changeButton, setChangeButton ] = useState(false)
 
-    const onAdd = () => {
+    const onAdd = (count) => {
         setChangeButton(true)
-        alert("agregaste articlos al carrtio")
+        //alert("agregaste " + count +" productos")
+        console.log(producto)
+        console.log(count)
+        addItem(producto, count);
     }
 
     return (
@@ -29,7 +37,6 @@ const ItemDetail = ({producto}) => {
                 <div className="card-body">
                     {producto.model}
                 </div>
-                <button>Mas info</button>  
                 {!changeButton && <ItemCount onAdd={onAdd} stock={10} initial={1} changeButton={changeButton} />}
                 {changeButton && <Link to="/cart"><button>Terminar la compra</button></Link> }
             </div>

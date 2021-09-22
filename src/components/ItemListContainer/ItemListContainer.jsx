@@ -9,7 +9,7 @@ function ItemListContainer ({name,stock,initial,onAdd}){
     const [items, setItems] = useState([]);
     const { category } = useParams()
     useEffect(() => {
-    console.log(category)
+    // console.log(category)
     if (category === undefined){
         findItems
             .then((res)=> setItems(res))
