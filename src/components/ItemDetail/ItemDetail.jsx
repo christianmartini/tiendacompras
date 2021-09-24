@@ -8,15 +8,11 @@ import { CartContext } from '../../context/CartContext';
 const ItemDetail = ({producto}) => {
 
     const {addItem} = useContext(CartContext);
-    const {carrito} = useContext(CartContext);
 
     const [changeButton, setChangeButton ] = useState(false)
 
     const onAdd = (count) => {
         setChangeButton(true)
-        //alert("agregaste " + count +" productos")
-        console.log(producto)
-        console.log(count)
         addItem(producto, count);
     }
 
