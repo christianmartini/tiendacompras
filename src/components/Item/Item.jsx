@@ -7,7 +7,7 @@ const Item = ({producto}) => {
     return (
         <ul>
             <div className='card w-50 mt-2'>
-                <img src={producto.img} alt="iphone" width="50" height="60"></img>
+                <img src={producto.img} alt="imagen" width="50" height="60"></img>
                 <div className="card-header">
                     {producto.name}
                 </div>
